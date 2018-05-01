@@ -1,44 +1,69 @@
-# Controle de Pessoas
+Segue abaixo as instruções para a avaliação técnica. Não existe uma data limite para a entrega, mas quanto mais rápido você entregar, melhor, visto que queremos a contratação para Fevereiro!
 
-O objetivo deste projeto é levantar vários containers para os sistemas, e como boa pratica será levantado containers para o banco postgres, servidor tomcat com java SDK e servidor ruby on rails.
+Nesta avaliação técnica, você deve apresentar uma solução utilizando a arquitetura Restful com as seguintes ferramentas:
 
-Esta aplicação foi desenvolvida em java Restfull API e tem como objetivo realizar o cadastro de pessoas de acordo com as especificações do teste enviado, usando as melhores praticas de desenvolvimentos no mercado, observando a estrutura de código legível e realização testes unitários.
+Angular ou AngularJS; e
+Spring Boot
+Seu teste será melhor avaliado com os seguintes requisitos:
 
-**Containers docker necessários**
-* Servidor enginx [AngularJS]
-* OpenJDK [JAVA]
-* Ruby2.4 [Rails]
-* Banco de Dados [Postgres9.4]
+Segurança de login/logout
+Autenticação via OAuth2
+Testes automatizados
+Você deve salvar seu código no Gitlab.com e implantar a aplicação no Heroku fazendo o uso de pipelines.
 
-![diagrama](https://user-images.githubusercontent.com/37155369/39466190-0bc064cc-4cfe-11e8-9e9d-4301b54ed331.jpg)
+O problema do Caixa Eletrônico:
 
-# Serviços implementados
-Como a funcionalidade deste teste é construir uma api que fornece serviços para um cliente, desenvolvi uma visão com angular que consome a api via ajax, tendo em vista que o rails é uma plataforma bastante robusta para ser apenas uma consumidora de serviços.
+Desenvolva um sistema para gerenciar as funcionalidades de saque e reabastecimento de estoque de cédulas de um caixa eletrônico.
 
-### AngularJS
-Desenvolvi uma visão com angularJs para apresentar a qualidade do código e a facilidade em desenvolver interface usando esta ferramenta. Esta camada está consumindo os serviços da API.
+Deve-se manter quais cédulas e a quantidade de cada uma que estão disponíveis no caixa eletrônico para saque dos correntistas.
 
-### Rails
-O projeto com rails não esta consumindo os serviços da API, mas sim com as migrações padrão.
+Deve-se criar uma funcionalidade para reabastecer as cédulas do caixa eletrônico especificando quantidade por cédulas.
 
-### API Engine
-A Api foi desenvolvida em java e sua função é manter o cadastro de pessoas. Sua implementação foi feita com Spring Boot dando maior produtividade aos trabalhos realizados. Escolhi as ferramentas da Spring por estar familiarizado com o seu conceito e pela facilidade no desenvolvimento.
+Exemplo:
 
-# Instalação
+40 cédulas de R$ 20,00
+100 cédulas de R$ 10,00
+50 cédulas de R$ 50,00
+10 cédulas de R$ 100,00
+O correntista deve ser capaz de sacar dinheiro da própria conta corrente.
 
-Entre com o _terminal_ no diretório que achar mais coveniente para executar a aplicação pelo docker-compose. Após a finalização desse passo a passo toda a aplicação estará pronta para uso.
+Para tanto, o correntista seleciona se deseja escolher as cédulas do saque.
 
-**Execute o comando:**
+Se o usuário deseja escolher, o sistema deve exibe todas as opções de combinações de cédulas (opções validas considerando as cédulas existentes) que utilizem até 3 cédulas. As opções com mais de 3 cédulas devem ser desconsideradas.
 
-* _docker-compose up -d_
+Exemplo:
 
-**OBS: para que a aplicação funcione é necessários**
-* Criar uma database '_pessoas_'
-* Rodar os migrates do rails
-  - docker-compose run app bundle exec rails g scaffold User nome:string email:string
-  - docker-compose run app bundle exec rails db:migrate
+Saque solicitado : R$ 120,00
 
-### Links de acesso
-* [AngularJS - http://localhost](http://localhost) 
-* [Rails - http://localhost:3000](http://localhost:3000) 
-* [API - http://localhost:8086/metodos](http://localhost:8086/metodos) 
+Escolha uma das opções de cédulas:
+
+1x R$100,00 + 1x R$ 20,00
+2x R$50,00 + 2x R$ 10,00
+1x R$100,00 + 2x R$ 10,00
+2x R$50,00 + 1x R$ 20,00
+5x R$20,00 + 2x R$ 10,00
+1x R$50,00 + 1x R$ 10,00 + 3x R$ 20,00
+... (assim por diante)
+Se o usuário NÃO deseja escolher as cédulas, o sistema deve disponibilizar a melhor combinação de cédulas afim de manter a maior proporção de cada cédula possível.
+
+Exemplo:
+
+Estoque:
+
+4 cédulas de R$ 20,00
+7 cédulas de R$ 10,00
+3 cédulas de R$ 50,00
+1 cédulas de R$ 100,00
+Saque solicitado: R$ 50,00
+
+Saque disponibilizado: 3x R$ 10,00 + 1x R$ 20,00
+
+Não há necessidade de gerenciar saldo, nem qual conta executa a operação, o foco do algoritmo é gerenciar o controle de cédulas/saque.
+
+Desenvolva seu código utilizando as melhores práticas que você aplicaria em uma situação real.
+
+Evite copiar soluções prontas. É muito importante que você não divulgue publicamente sua solução!
+
+Quando finalizar o desenvolvimento, por favor, nos envie os links para verificarmos!
+
+Boa sorte!
