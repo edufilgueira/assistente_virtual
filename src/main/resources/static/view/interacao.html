@@ -1,0 +1,62 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h3>Interação</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+
+		<form>
+		  <div class="form-row">
+		    <div class="input-group mb-3">
+			  <div class="input-group-prepend">
+			    <label class="input-group-text" for="inputGroupSelect01">Assunto</label>
+			  </div>
+			  <select class="form-control" id="inputGroupSelect01" ng-options="assunto.retorno for assunto in assuntos track by assunto.id"  ng-model="interacao.assunto" ng-change="filtrarInteracoes();">
+			    <option value="">Selecione o assunto</option>
+			  </select>
+			</div>
+			<div class="col-7">
+		      <label for="exampleInputEmail1">Texto</label>
+		      <input type="text" ng-model="interacao.texto" class="form-control" placeholder="Texto">
+		    </div>
+		  </div>
+		  &nbsp;
+		  <div class="form-group">
+		    <button type="submit" class="btn btn-primary" ng-click="salvar()">Salvar</button>
+			<button type="submit" class="btn btn-primary" ng-click="cancelar()">Cancelar</button>
+		  </div> 
+		</form>
+		
+		<table class="table">
+			<tr>
+				<th>ID</th>
+				<th>Texto</th>
+				<th>Assunto</th>
+				<th></th>
+			</tr>
+			<tr ng-repeat="interacao in interacoes">
+				<td>{{ interacao.id }}</td>
+				<td>{{ interacao.texto }}</td>
+				<td>{{ interacao.assunto.retorno }}</td>
+				<td>
+				  <button type="button" class="btn btn-danger" ng-click="excluir(interacao)">Deletar</button>
+				  <button type="button" class="btn btn-success" ng-click="alterar(interacao)">Alterar</button>
+				</td>
+			</tr>
+
+		</table>
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+

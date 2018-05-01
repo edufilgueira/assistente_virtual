@@ -1,0 +1,11 @@
+@relation caracteristicas
+
+@attribute laranja_camisa_bart real
+@attribute azul_calcao_bart real
+@attribute azul_sapato_bart real
+@attribute marrom_boca_homer real
+@attribute azul_calca_homer real
+@attribute cinza_sapato_homer real
+@attribute classe {Bart, Homer}
+
+@data

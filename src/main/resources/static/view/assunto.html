@@ -1,0 +1,67 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h3>Pesquisa de assunto</h3>
+    </div>
+  </div>
+  <div class="row" >
+    <div class="col">
+
+		<form>
+		  <div class="form-row">
+		  	<input type="text" ng-model="assunto.pesquisa" class="form-control" placeholder="Procurando... ?">
+		  </div>
+		  &nbsp;
+		  <div class="form-group">
+		    <button type="submit" class="btn btn-primary" ng-click="consultar(1)">Buscar</button>
+		    <a href="#/assunto/0" class="btn btn-success">Novo</a>
+		    <hr>
+		  </div> 
+		</form>
+
+		<div class='btn-group'>
+          <button type='button' class='btn btn-default' ng-disabled='currentPage == 1' ng-click='consultar(1)'>&laquo;</button>
+          <button type='button' class='btn btn-default' ng-disabled='currentPage == page' ng-click='consultar(page)' ng-repeat='page in pages'>{{page}}</button>
+          <button type='button' class='btn btn-default' ng-disabled='currentPage > (assuntos.length/pageSize)', ng-click='consultar(currentPage = currentPage + 1)'>&raquo;</button>
+          <select class="form-control" style="width:auto" ng-model="assunto.qntPorPagina" ng-change="qntPorPagina();">
+			<option value="10" ng-selected="true">10</option>
+			<option value="20">20</option>
+			<option value="40">40</option>
+			<option value="50">50</option>
+		  </select>
+        </div>
+		<table class="table table-striped table-hover table-bordered table-sm">
+			<thead>
+				<tr>
+					<th width="2%">#</th>
+					<th>NOME</th>
+					<th width="3%">E</th>
+					<th width="3%">R</th>
+					<th width="3%">A</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="assunto in assuntos|filter:search">
+					<td>{{ assunto.id }}</td>
+					<td>{{ assunto.retorno }}</td>
+					<td width="3%"><a ng-click="excluir(assunto)"  href=""><img src="../img/excluir.png"  width="22px" ng-if="assunto.status=='1'"/></a></td>
+					<td width="3%"><a ng-click="reativar(assunto)" href=""><img src="../img/reativar.png" width="22px" ng-if="assunto.status=='0'"/></a></td>
+					<td width="3%"><a href="#/assunto/{{assunto.id}}"><img src="../img/alterar.png"  width="22px"/></a></td>
+				</tr>
+			</tbody>
+		</table>
+		<div class='btn-group'>
+          <button type='button' class='btn btn-default' ng-disabled='currentPage == 1' ng-click='consultar(1)'>&laquo;</button>
+          <button type='button' class='btn btn-default' ng-disabled='currentPage == page' ng-click='consultar(page)' ng-repeat='page in pages'>{{page}}</button>
+          <button type='button' class='btn btn-default' ng-disabled='currentPage > (assuntos.length/pageSize)', ng-click='consultar(currentPage = currentPage + 1)'>&raquo;</button>
+          <select class="form-control" style="width:auto" ng-model="assunto.qntPorPagina" ng-change="qntPorPagina();">
+			<option value="10" ng-selected="true">10</option>
+			<option value="20">20</option>
+			<option value="40">40</option>
+			<option value="50">50</option>
+		  </select>
+        </div>
+
+    </div>
+  </div>
+</div>

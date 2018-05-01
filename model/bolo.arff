@@ -1,0 +1,51 @@
+@relation caracteristicas
+
+@attribute tem numeric
+@attribute bolo numeric
+@attribute mole numeric
+@attribute fofo numeric
+@attribute quanto numeric
+@attribute custa numeric
+@attribute o numeric
+@attribute voces numeric
+@attribute fazem numeric
+@attribute preco numeric
+@attribute qual numeric
+@attribute do numeric
+@attribute classe {bolo_mole,bolo_fofo,bolos}
+
+@data
+1,1,1,0,0,0,0,0,0,0,0,0,bolo_mole
+0,1,1,0,0,0,1,0,0,0,1,0,bolo_mole
+1,1,0,1,0,0,0,0,0,0,0,0,bolo_fofo
+0,1,0,1,0,0,1,0,0,0,1,0,bolo_mole
+0,1,1,0,1,1,1,0,0,0,0,0,bolo_mole
+0,1,0,1,1,1,1,0,0,0,0,0,bolo_fofo
+1,1,0,0,0,0,0,0,0,0,0,0,bolos
+0,1,0,0,0,0,0,1,1,0,0,0,bolos
+0,1,0,0,0,0,0,0,1,0,0,0,bolos
+0,1,1,0,1,1,0,0,0,0,0,0,bolo_mole
+0,1,0,1,1,1,0,0,0,0,0,0,bolo_fofo
+0,1,0,0,0,0,0,0,0,1,0,1,bolos
+0,1,0,0,0,0,0,0,1,0,1,0,bolos
+0,1,0,1,0,0,0,0,1,0,0,0,bolo_fofo
+0,1,1,0,0,0,0,0,1,0,0,0,bolo_mole
+
+
+tem bolo mole
+tem bolo fofo
+quanto custa o bolo fofo
+quanto custa o bolo mole
+tem bolo
+vocês fazem bolo
+fazem bolo
+bolo mole quanto custa
+qual o bolo mole
+qual o bolo fofo
+preco do bolo
+fazem qual bolo
+fazem bolo fofo
+fazem bolo mole
+
+qual o preço do bolo mole
+0,1,1,0,0,0,1,0,0,1,1,1

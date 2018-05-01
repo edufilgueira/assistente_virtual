@@ -1,0 +1,34 @@
+@relation MapaNeural
+
+@attribute quant numeric
+@attribute cust numeric
+@attribute o numeric
+@attribute bol numeric
+@attribute mol numeric
+@attribute quer numeric
+@attribute mais numeric
+@attribute entreg numeric
+@attribute fof numeric
+@attribute faz numeric
+@attribute delivery numeric
+@attribute voce numeric
+@attribute voc numeric
+@attribute vc numeric
+@attribute a numeric
+@attribute modelaca numeric
+@attribute de numeric
+@attribute tem numeric
+@attribute class {mole,fofo,entrega}
+@data
+1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,mole
+0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,mole
+0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,entrega
+0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,fofo
+0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,entrega
+0,0,0,1,0,0,0,0,1,1,0,1,0,0,0,0,0,0,fofo
+0,0,0,1,0,0,0,0,1,1,0,0,1,0,0,0,0,0,fofo
+0,0,0,0,0,0,0,1,0,1,0,0,0,1,0,0,0,0,entrega
+0,0,0,0,0,0,0,1,0,1,0,0,0,1,0,0,0,0,entrega
+1,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,entrega
+0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,0,mole
+0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,mole

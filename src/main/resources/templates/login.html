@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html ng-app="appAssistenteVirtual" xmlns="http://www.w3.org/1999/xhtml" lang="pt-br" xml:lang="pt-br">
+	<head>
+	<title>MasterPage</title>
+	<base href="/"  />
+	<meta charset="UTF-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+
+		<!--
+	<link rel="stylesheet" href="./bootstrap/css/bootstrap.css"/>
+		<link rel="stylesheet" href="./bootstrap/css/css.css"/>
+	 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="./bootstrap/js/bootstrap.js"></script>
+	<link rel="stylesheet" href="./bootstrap/css/css.css"/>
+	-->
+
+	<link rel="stylesheet" href="./bootstrap/css/bootstrap.css"/>	
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+	
+	<!-- <link rel="stylesheet" href="./bootstrap/css/css.css"/>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous"/>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>-->
+	 
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.js"></script>
+
+	<script src="./js/app.js"></script>
+	<script src="./js/main.js"></script>
+	<script src="./js/controller/assunto-controller.js"></script>
+	<script src="./js/controller/assunto-detalhe-controller.js"></script>
+	<script src="./js/controller/interacao-controller.js"></script>
+	<script src="./js/controller/assistente-controller.js"></script>
+	<script src="./js/controller/login-controller.js"></script>
+	<style>
+	.view{
+		margin:15px;
+	}
+	
+	.frm-autenticar {
+		max-width: 330px;
+		padding: 15px;
+		margin: 0 auto;
+	}
+	.login {
+		//padding-top: 40px;
+		//padding-bottom: 40px;
+		background-color: #eee;
+	}
+	
+	</style>
+</head>
+
+<body ng-controller="main" >
+
+
+
+
+
+
+
+<div class="login">
+
+      <form class="frm-autenticar" ng-submit="autenticar()">
+        <h2 class="form-signin-heading">Login</h2>
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Autenticar</button>
+      </form>
+
+</div> <!-- /container -->
+
+
+</body>
+</html>

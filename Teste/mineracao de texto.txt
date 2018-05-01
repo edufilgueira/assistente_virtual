@@ -1,0 +1,7 @@
+determinar se uma descrição é ou não evidência de irregularidade
+Naïve Bayes: “Híbrido”  “Frequência Inversa” “Frequência” KDD
+KDD visa preparação dos dados, busca por padrões, avaliação do conhecimento e refinamento.
+eleção, pré-processamento, transformação, mineração de dados, análise / assimilação
+
+pré-processamento remoção de StopWords, conflação, normalização de sinônimos e indexação.  remoção de stopwords os termos com pouca ou nenhuma relevância para o documento serão removidos. São, em sua maioria, pronomes, preposições, artigos, numerais e conjunções
+

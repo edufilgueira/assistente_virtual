@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h3>Detalhes de assunto</h3>
+    </div>
+  </div>
+  <div class="row" >
+    <div class="col">
+
+		<form name="frmAssunto">
+		  <div class="form-row">
+		    <label for="exampleInputEmail1">Retorno</label>
+		  	<input type="text" name="txtRetorno" ng-model="assunto.retorno" ng-disabled="desabilitarBotao" required ng-minlength="3" class="form-control" placeholder="Digite retorno">
+		  	<span ng-show="frmAssunto.txtRetorno.$error.required && frmAssunto.txtRetorno.$dirty">Campo retorno obrigatório</span>
+		  	<span ng-show="frmAssunto.txtRetorno.$error.minlength && frmAssunto.txtRetorno.$dirty">Digite no mínimo 3 caracteres</span>
+		  </div>
+		  &nbsp;
+		  <div class="form-group">
+		    <button type="submit" ng-disabled="!desabilitarBotao" class="btn btn-success" ng-click="novo()"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Novo</button>
+		    <button type="submit" ng-disabled="frmAssunto.$invalid"  class="btn btn-primary" ng-click="salvar()"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span> Salvar</button>
+		    <button type="submit" ng-disabled="desabilitarBotao"  class="btn btn-primary " ng-click="cancelar()"><span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span> Cancelar</button>
+		    <a href="#/assunto" class="btn btn-danger"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Voltar</a>
+		    <hr>
+		  </div> 
+		</form>
+
+    </div>
+  </div>
+</div>
