@@ -41,6 +41,7 @@ public class Palavra {
 	public void setOriginal(String original) {
 		this.original = original;
 	}
+
 	
 	
 	
